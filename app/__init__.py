@@ -9,7 +9,6 @@ from flask_migrate import Migrate
 # from app import routes, models
 
 
-
 # def main():
 #     app = Flask(__name__)
 #     app.config.from_object(Config)
