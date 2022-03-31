@@ -7,16 +7,24 @@ from flask_migrate import Migrate
 
 #  My App
 # from app import routes, models
-from app.models import User
 
 
-def main():
-    app = Flask(__name__)
-    app.config.from_object(Config)
-    db = SQLAlchemy(app)
-    print(f"db : {db}")
-    migrate = Migrate(app, db)
+
+# def main():
+#     app = Flask(__name__)
+#     app.config.from_object(Config)
+#     db = SQLAlchemy(app)
+#     print(f"db : {db}")
+#     migrate = Migrate(app, db)
 
 
-if __name__ == "__main__":
-    app = Flask(__name__)
+# if __name__ == "__main__":
+#     app = Flask(__name__)
+
+
+app = Flask(__name__)
+app.config.from_object(Config)
+db = SQLAlchemy(app)
+migrate = Migrate(app, db)
+
+# from app.models import User
