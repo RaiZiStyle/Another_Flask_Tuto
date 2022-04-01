@@ -10,8 +10,6 @@ from config import Config
 #  My App
 
 
-
-
 # def main():
 #     app = Flask(__name__)
 #     app.config.from_object(Config)
@@ -27,10 +25,11 @@ from config import Config
 app = Flask(__name__)
 # print(f"__name__ : {__name__}")
 app.config.from_object(Config)
+print(f"app.config {app.config}")
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login = LoginManager(app)
 login.login_view = 'login'
 
-# from app.models import User
+
 from app import routes, models
